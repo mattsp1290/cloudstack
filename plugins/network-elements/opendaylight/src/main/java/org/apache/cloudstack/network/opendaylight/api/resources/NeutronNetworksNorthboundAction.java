@@ -52,11 +52,7 @@ public class NeutronNetworksNorthboundAction extends Action {
         String uri = NeutronNorthboundEnum.NETWORKS_URI.getUri();
         String bodystring = executeGet(uri, Collections.<String, String> emptyMap());
 
-<<<<<<< HEAD
         Type returnType = new TypeToken<NeutronNetworksList<NeutronNetwork>>() {
-=======
-        Type returnType = new TypeToken<NeutronNetworksList<NeutronNetworkWrapper>>() {
->>>>>>> b7d7342cd787af27a7f52a03356e9218a19c0030
         }.getType();
 
         T returnValue = (T) gsonNeutronNetwork.fromJson(bodystring, returnType);
