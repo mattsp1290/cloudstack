@@ -47,7 +47,10 @@ import org.apache.cloudstack.network.opendaylight.agent.responses.DestroyPortAns
 import org.apache.cloudstack.network.opendaylight.api.NeutronRestApiException;
 import org.apache.cloudstack.network.opendaylight.api.model.NeutronNetwork;
 import org.apache.cloudstack.network.opendaylight.api.model.NeutronNetworkWrapper;
+<<<<<<< HEAD
 import org.apache.cloudstack.network.opendaylight.api.model.NeutronNetworksList;
+=======
+>>>>>>> b7d7342cd787af27a7f52a03356e9218a19c0030
 import org.apache.cloudstack.network.opendaylight.api.model.NeutronNode;
 import org.apache.cloudstack.network.opendaylight.api.model.NeutronNodeWrapper;
 import org.apache.cloudstack.network.opendaylight.api.model.NeutronNodesList;
@@ -208,6 +211,7 @@ public class OpenDaylightControllerResource implements ServerResource {
 
     private Answer executeRequest(ConfigureNetworkCommand cmd) {
         NeutronNetworksNorthboundAction configureNetwork = new NeutronNetworksNorthboundAction(controllerUrl, controllerUsername, controllerPassword);
+<<<<<<< HEAD
 
         // Find free gre key
         int gre_key = -1;
@@ -229,6 +233,8 @@ public class OpenDaylightControllerResource implements ServerResource {
             return new ConfigureNetworkAnswer(cmd, e);
         }
 
+=======
+>>>>>>> b7d7342cd787af27a7f52a03356e9218a19c0030
         NeutronNetwork newNetwork = new NeutronNetwork();
 
         // Configuration from the command
@@ -238,7 +244,11 @@ public class OpenDaylightControllerResource implements ServerResource {
         // Static configuation
         newNetwork.setNetworkType("gre");
         newNetwork.setShared(false);
+<<<<<<< HEAD
         newNetwork.setSegmentationId(gre_key);
+=======
+        newNetwork.setSegmentationId(100);
+>>>>>>> b7d7342cd787af27a7f52a03356e9218a19c0030
         newNetwork.setId(UUID.randomUUID());
 
         NeutronNetworkWrapper wrapper = new NeutronNetworkWrapper();
