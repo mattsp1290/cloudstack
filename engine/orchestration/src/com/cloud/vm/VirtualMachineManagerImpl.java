@@ -492,7 +492,7 @@ public class VirtualMachineManagerImpl extends ManagerBase implements VirtualMac
 
         Long hostId = vm.getHostId() != null ? vm.getHostId() : vm.getLastHostId();
 
-        if (volumeExpungeCommands != null && hostId != null) {
+        if (volumeExpungeCommands != null && volumeExpungeCommands.size() > 0 && hostId != null) {
             Commands cmds = new Commands(Command.OnError.Stop);
 
             for (Command volumeExpungeCommand : volumeExpungeCommands) {
@@ -1125,6 +1125,13 @@ public class VirtualMachineManagerImpl extends ManagerBase implements VirtualMac
                     VolumeVO volume = _volsDao.findById(volumeId);
 
                     disk.setPath(volume.get_iScsiName());
+
+                    if (disk.getData() instanceof VolumeObjectTO) {
+                        VolumeObjectTO volTo = (VolumeObjectTO)disk.getData();
+
+                        volTo.setPath(volume.get_iScsiName());
+                    }
+
                     volume.setPath(volume.get_iScsiName());
 
                     _volsDao.update(volumeId, volume);
@@ -4310,7 +4317,7 @@ public class VirtualMachineManagerImpl extends ManagerBase implements VirtualMac
                     _jobMgr.submitAsyncJob(workJob, VmWorkConstants.VM_WORK_QUEUE, vm.getId());
                 }
 
-                return new Object[] {workJob, new Long(workJob.getId())};
+                return new Object[] {workJob, workJob.getId()};
             }
         });
 
@@ -4361,7 +4368,7 @@ public class VirtualMachineManagerImpl extends ManagerBase implements VirtualMac
                     _jobMgr.submitAsyncJob(workJob, VmWorkConstants.VM_WORK_QUEUE, vm.getId());
                 }
 
-                return new Object[] {workJob, new Long(workJob.getId())};
+                return new Object[] {workJob, workJob.getId()};
             }
         });
 
@@ -4414,7 +4421,7 @@ public class VirtualMachineManagerImpl extends ManagerBase implements VirtualMac
                     _jobMgr.submitAsyncJob(workJob, VmWorkConstants.VM_WORK_QUEUE, vm.getId());
                 }
 
-                return new Object[] {workJob, new Long(workJob.getId())};
+                return new Object[] {workJob, workJob.getId()};
             }
         });
 
@@ -4463,7 +4470,7 @@ public class VirtualMachineManagerImpl extends ManagerBase implements VirtualMac
 
                     _jobMgr.submitAsyncJob(workJob, VmWorkConstants.VM_WORK_QUEUE, vm.getId());
                 }
-                return new Object[] {workJob, new Long(workJob.getId())};
+                return new Object[] {workJob, workJob.getId()};
             }
         });
 
@@ -4518,7 +4525,7 @@ public class VirtualMachineManagerImpl extends ManagerBase implements VirtualMac
 
                     _jobMgr.submitAsyncJob(workJob, VmWorkConstants.VM_WORK_QUEUE, vm.getId());
                 }
-                return new Object[] {workJob, new Long(workJob.getId())};
+                return new Object[] {workJob, workJob.getId()};
             }
         });
 
@@ -4571,7 +4578,7 @@ public class VirtualMachineManagerImpl extends ManagerBase implements VirtualMac
                     _jobMgr.submitAsyncJob(workJob, VmWorkConstants.VM_WORK_QUEUE, vm.getId());
                 }
 
-                return new Object[] {workJob, new Long(workJob.getId())};
+                return new Object[] {workJob, workJob.getId()};
             }
         });
 
@@ -4623,7 +4630,7 @@ public class VirtualMachineManagerImpl extends ManagerBase implements VirtualMac
                     _jobMgr.submitAsyncJob(workJob, VmWorkConstants.VM_WORK_QUEUE, vm.getId());
                 }
 
-                return new Object[] {workJob, new Long(workJob.getId())};
+                return new Object[] {workJob, workJob.getId()};
             }
         });
 
@@ -4672,7 +4679,7 @@ public class VirtualMachineManagerImpl extends ManagerBase implements VirtualMac
 
                     _jobMgr.submitAsyncJob(workJob, VmWorkConstants.VM_WORK_QUEUE, vm.getId());
                 }
-                return new Object[] {workJob, new Long(workJob.getId())};
+                return new Object[] {workJob, workJob.getId()};
             }
         });
 
@@ -4721,7 +4728,7 @@ public class VirtualMachineManagerImpl extends ManagerBase implements VirtualMac
 
                     _jobMgr.submitAsyncJob(workJob, VmWorkConstants.VM_WORK_QUEUE, vm.getId());
                 }
-                return new Object[] {workJob, new Long(workJob.getId())};
+                return new Object[] {workJob, workJob.getId()};
             }
         });
 
@@ -4770,7 +4777,7 @@ public class VirtualMachineManagerImpl extends ManagerBase implements VirtualMac
 
                     _jobMgr.submitAsyncJob(workJob, VmWorkConstants.VM_WORK_QUEUE, vm.getId());
                 }
-                return new Object[] {workJob, new Long(workJob.getId())};
+                return new Object[] {workJob, workJob.getId()};
             }
         });
 
@@ -4821,7 +4828,7 @@ public class VirtualMachineManagerImpl extends ManagerBase implements VirtualMac
 
                     _jobMgr.submitAsyncJob(workJob, VmWorkConstants.VM_WORK_QUEUE, vm.getId());
                 }
-                return new Object[] {workJob, new Long(workJob.getId())};
+                return new Object[] {workJob, workJob.getId()};
             }
         });
 
@@ -4911,7 +4918,7 @@ public class VirtualMachineManagerImpl extends ManagerBase implements VirtualMac
         NicProfile nic = orchestrateAddVmToNetwork(vm, network,
                 work.getRequestedNicProfile());
 
-        return new Pair<JobInfo.Status, String>(JobInfo.Status.SUCCEEDED, _jobMgr.marshallResultObject(new Long(nic.getId())));
+        return new Pair<JobInfo.Status, String>(JobInfo.Status.SUCCEEDED, _jobMgr.marshallResultObject(nic.getId()));
     }
 
     private Pair<JobInfo.Status, String> orchestrateRemoveNicFromVm(VmWorkRemoveNicFromVm work) throws Exception {
