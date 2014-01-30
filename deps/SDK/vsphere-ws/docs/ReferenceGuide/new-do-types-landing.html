@@ -1,0 +1,277 @@
+<html>
+<head>
+<title>VMware vSphere API Reference</title>
+<script language="JavaScript" src="./commonRes.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="doc-style.css"/>
+</head>
+<body>
+<h1>New and Changed Data Object Elements in 5.1</h1>
+<p>
+ The following sections list the new data object API elements:
+<ul>
+<li><a href="#newDO">Data Objects</a></li>
+<li><a href="#newDOProps">Data Object Properties</a></li>
+</ul>
+<h2><a name="newDO">New Data Objects</a></h2>
+<table border="1" cellpadding="5" cellspacing="0">
+<tr><th><strong>New Data Objects</strong></th></tr>
+<tr><td><a href="vim.cluster.DasFailoverLevelAdvancedRuntimeInfo.VmSlots.html">ClusterDasFailoverLevelAdvancedRuntimeInfoVmSlots</a></td></tr>
+<tr><td><a href="vim.cluster.FixedSizeSlotPolicy.html">ClusterFixedSizeSlotPolicy</a></td></tr>
+<tr><td><a href="vim.cluster.SlotPolicy.html">ClusterSlotPolicy</a></td></tr>
+<tr><td><a href="vim.DistributedVirtualSwitch.BackupRestoreCapability.html">DVSBackupRestoreCapability</a></td></tr>
+<tr><td><a href="vim.DistributedVirtualSwitch.HealthCheckFeatureCapability.html">DVSHealthCheckCapability</a></td></tr>
+<tr><td><a href="vim.DistributedVirtualSwitch.HealthCheckConfig.html">DVSHealthCheckConfig</a></td></tr>
+<tr><td><a href="vim.dvs.DistributedVirtualPort.HostLocalPortInfo.html">DVSHostLocalPortInfo</a></td></tr>
+<tr><td><a href="vim.DistributedVirtualSwitch.RollbackCapability.html">DVSRollbackCapability</a></td></tr>
+<tr><td><a href="vim.DistributedVirtualSwitch.RuntimeInfo.html">DVSRuntimeInfo</a></td></tr>
+<tr><td><a href="vim.Datacenter.ConfigInfo.html">DatacenterConfigInfo</a></td></tr>
+<tr><td><a href="vim.Datacenter.ConfigSpec.html">DatacenterConfigSpec</a></td></tr>
+<tr><td><a href="vim.dvs.DistributedVirtualSwitchManager.ImportResult.html">DistributedVirtualSwitchManagerImportResult</a></td></tr>
+<tr><td><a href="vim.event.DvpgImportEvent.html">DvpgImportEvent</a></td></tr>
+<tr><td><a href="vim.event.DvpgRestoreEvent.html">DvpgRestoreEvent</a></td></tr>
+<tr><td><a href="vim.fault.DvsApplyOperationFault.FaultOnObject.html">DvsApplyOperationFaultFaultOnObject</a></td></tr>
+<tr><td><a href="vim.event.DvsHealthStatusChangeEvent.html">DvsHealthStatusChangeEvent</a></td></tr>
+<tr><td><a href="vim.event.DvsImportEvent.html">DvsImportEvent</a></td></tr>
+<tr><td><a href="vim.event.DvsPortRuntimeChangeEvent.html">DvsPortRuntimeChangeEvent</a></td></tr>
+<tr><td><a href="vim.event.DvsPortVendorSpecificStateChangeEvent.html">DvsPortVendorSpecificStateChangeEvent</a></td></tr>
+<tr><td><a href="vim.event.DvsRestoreEvent.html">DvsRestoreEvent</a></td></tr>
+<tr><td><a href="vim.dvs.EntityBackup.html">EntityBackup</a></td></tr>
+<tr><td><a href="vim.dvs.EntityBackup.Config.html">EntityBackupConfig</a></td></tr>
+<tr><td><a href="vim.ExtensionManager.IpAllocationUsage.html">ExtensionManagerIpAllocationUsage</a></td></tr>
+<tr><td><a href="vim.vm.GuestInfo.NamespaceGenerationInfo.html">GuestInfoNamespaceGenerationInfo</a></td></tr>
+<tr><td><a href="vim.host.FeatureCapability.html">HostFeatureCapability</a></td></tr>
+<tr><td><a href="vim.host.FeatureMask.html">HostFeatureMask</a></td></tr>
+<tr><td><a href="vim.event.HostLocalPortCreatedEvent.html">HostLocalPortCreatedEvent</a></td></tr>
+<tr><td><a href="vim.host.LowLevelProvisioningManager.VmMigrationStatus.html">HostLowLevelProvisioningManagerVmMigrationStatus</a></td></tr>
+<tr><td><a href="vim.host.LowLevelProvisioningManager.VmRecoveryInfo.html">HostLowLevelProvisioningManagerVmRecoveryInfo</a></td></tr>
+<tr><td><a href="vim.dvs.HostMember.HealthCheckResult.html">HostMemberHealthCheckResult</a></td></tr>
+<tr><td><a href="vim.dvs.HostMember.RuntimeInfo.html">HostMemberRuntimeInfo</a></td></tr>
+<tr><td><a href="vim.dvs.HostMember.UplinkHealthCheckResult.html">HostMemberUplinkHealthCheckResult</a></td></tr>
+<tr><td><a href="vim.host.SystemSwapConfiguration.html">HostSystemSwapConfiguration</a></td></tr>
+<tr><td><a href="vim.host.SystemSwapConfiguration.DatastoreOption.html">HostSystemSwapConfigurationDatastoreOption</a></td></tr>
+<tr><td><a href="vim.host.SystemSwapConfiguration.DisabledOption.html">HostSystemSwapConfigurationDisabledOption</a></td></tr>
+<tr><td><a href="vim.host.SystemSwapConfiguration.HostCacheOption.html">HostSystemSwapConfigurationHostCacheOption</a></td></tr>
+<tr><td><a href="vim.host.SystemSwapConfiguration.HostLocalSwapOption.html">HostSystemSwapConfigurationHostLocalSwapOption</a></td></tr>
+<tr><td><a href="vim.host.SystemSwapConfiguration.SystemSwapOption.html">HostSystemSwapConfigurationSystemSwapOption</a></td></tr>
+<tr><td><a href="vim.host.TpmAttestationReport.html">HostTpmAttestationReport</a></td></tr>
+<tr><td><a href="vim.host.TpmBootSecurityOptionEventDetails.html">HostTpmBootSecurityOptionEventDetails</a></td></tr>
+<tr><td><a href="vim.host.TpmCommandEventDetails.html">HostTpmCommandEventDetails</a></td></tr>
+<tr><td><a href="vim.host.TpmEventDetails.html">HostTpmEventDetails</a></td></tr>
+<tr><td><a href="vim.host.TpmEventLogEntry.html">HostTpmEventLogEntry</a></td></tr>
+<tr><td><a href="vim.host.TpmOptionEventDetails.html">HostTpmOptionEventDetails</a></td></tr>
+<tr><td><a href="vim.host.TpmSoftwareComponentEventDetails.html">HostTpmSoftwareComponentEventDetails</a></td></tr>
+<tr><td><a href="vim.fault.ImportOperationBulkFault.FaultOnImport.html">ImportOperationBulkFaultFaultOnImport</a></td></tr>
+<tr><td><a href="vim.IpPoolManager.IpAllocation.html">IpPoolManagerIpAllocation</a></td></tr>
+<tr><td><a href="vim.LatencySensitivity.html">LatencySensitivity</a></td></tr>
+<tr><td><a href="vim.event.MtuMatchEvent.html">MtuMatchEvent</a></td></tr>
+<tr><td><a href="vim.event.MtuMismatchEvent.html">MtuMismatchEvent</a></td></tr>
+<tr><td><a href="vim.event.NetworkRollbackEvent.html">NetworkRollbackEvent</a></td></tr>
+<tr><td><a href="vim.OvfManager.OvfOptionInfo.html">OvfOptionInfo</a></td></tr>
+<tr><td><a href="vim.event.RecoveryEvent.html">RecoveryEvent</a></td></tr>
+<tr><td><a href="vim.event.RollbackEvent.html">RollbackEvent</a></td></tr>
+<tr><td><a href="vim.vm.ScheduledHardwareUpgradeInfo.html">ScheduledHardwareUpgradeInfo</a></td></tr>
+<tr><td><a href="vim.VirtualDiskManager.SeSparseVirtualDiskSpec.html">SeSparseVirtualDiskSpec</a></td></tr>
+<tr><td><a href="vim.SessionManager.VmomiServiceRequestSpec.html">SessionManagerVmomiServiceRequestSpec</a></td></tr>
+<tr><td><a href="vim.StorageResourceManager.StoragePerformanceSummary.html">StoragePerformanceSummary</a></td></tr>
+<tr><td><a href="vim.event.TeamingMatchEvent.html">TeamingMatchEvent</a></td></tr>
+<tr><td><a href="vim.event.TeamingMisMatchEvent.html">TeamingMisMatchEvent</a></td></tr>
+<tr><td><a href="vim.event.UplinkPortMtuNotSupportEvent.html">UplinkPortMtuNotSupportEvent</a></td></tr>
+<tr><td><a href="vim.event.UplinkPortMtuSupportEvent.html">UplinkPortMtuSupportEvent</a></td></tr>
+<tr><td><a href="vim.event.UplinkPortVlanTrunkedEvent.html">UplinkPortVlanTrunkedEvent</a></td></tr>
+<tr><td><a href="vim.event.UplinkPortVlanUntrunkedEvent.html">UplinkPortVlanUntrunkedEvent</a></td></tr>
+<tr><td><a href="vim.dvs.VmwareDistributedVirtualSwitch.VmwareHealthCheckFeatureCapability.html">VMwareDVSHealthCheckCapability</a></td></tr>
+<tr><td><a href="vim.dvs.VmwareDistributedVirtualSwitch.VmwareHealthCheckConfig.html">VMwareDVSHealthCheckConfig</a></td></tr>
+<tr><td><a href="vim.dvs.VmwareDistributedVirtualSwitch.MtuHealthCheckResult.html">VMwareDVSMtuHealthCheckResult</a></td></tr>
+<tr><td><a href="vim.dvs.VmwareDistributedVirtualSwitch.TeamingHealthCheckConfig.html">VMwareDVSTeamingHealthCheckConfig</a></td></tr>
+<tr><td><a href="vim.dvs.VmwareDistributedVirtualSwitch.TeamingHealthCheckResult.html">VMwareDVSTeamingHealthCheckResult</a></td></tr>
+<tr><td><a href="vim.dvs.VmwareDistributedVirtualSwitch.VlanHealthCheckResult.html">VMwareDVSVlanHealthCheckResult</a></td></tr>
+<tr><td><a href="vim.dvs.VmwareDistributedVirtualSwitch.VlanMtuHealthCheckConfig.html">VMwareDVSVlanMtuHealthCheckConfig</a></td></tr>
+<tr><td><a href="vim.dvs.VmwareDistributedVirtualSwitch.VspanFeatureCapability.html">VMwareDVSVspanCapability</a></td></tr>
+<tr><td><a href="vim.dvs.VmwareDistributedVirtualSwitch.LacpFeatureCapability.html">VMwareDvsLacpCapability</a></td></tr>
+<tr><td><a href="vim.dvs.VmwareDistributedVirtualSwitch.UplinkLacpPolicy.html">VMwareUplinkLacpPolicy</a></td></tr>
+<tr><td><a href="vim.vm.device.VirtualDevice.BusSlotInfo.html">VirtualDeviceBusSlotInfo</a></td></tr>
+<tr><td><a href="vim.vm.device.VirtualDeviceOption.BusSlotOption.html">VirtualDeviceBusSlotOption</a></td></tr>
+<tr><td><a href="vim.vm.device.VirtualDevice.PciBusSlotInfo.html">VirtualDevicePciBusSlotInfo</a></td></tr>
+<tr><td><a href="vim.vm.device.VirtualDiskOption.DeltaDiskFormatsSupported.html">VirtualDiskDeltaDiskFormatsSupported</a></td></tr>
+<tr><td><a href="vim.vm.device.VirtualDisk.SeSparseBackingInfo.html">VirtualDiskSeSparseBackingInfo</a></td></tr>
+<tr><td><a href="vim.vm.device.VirtualDiskOption.SeSparseBackingOption.html">VirtualDiskSeSparseBackingOption</a></td></tr>
+<tr><td><a href="vim.vm.FeatureRequirement.html">VirtualMachineFeatureRequirement</a></td></tr>
+<tr><td><a href="vim.VirtualMachine.WipeResult.html">VirtualMachineWipeResult</a></td></tr>
+<tr><td><a href="vim.vm.device.VirtualSerialPort.ThinPrintBackingInfo.html">VirtualSerialPortThinPrintBackingInfo</a></td></tr>
+<tr><td><a href="vim.vm.device.VirtualSerialPortOption.ThinPrintBackingOption.html">VirtualSerialPortThinPrintBackingOption</a></td></tr>
+<tr><td><a href="vim.vm.device.VirtualUSBController.PciBusSlotInfo.html">VirtualUSBControllerPciBusSlotInfo</a></td></tr>
+<tr><td><a href="vim.event.VmRequirementsExceedCurrentEVCModeEvent.html">VmRequirementsExceedCurrentEVCModeEvent</a></td></tr>
+</table>
+<h2><a name="newDOProps">New Data Object Properties</a></h2>
+<table border="1" cellpadding="5" cellspacing="0">
+<tr><th><strong>Data Object</strong></th>
+<th><strong>Property</strong></th></tr>
+<tr><td><a href="vim.Capability.html">Capability</a></td>
+<td><a href="vim.Capability.html#networkBackupAndRestoreSupported">networkBackupAndRestoreSupported</a></td></tr>
+<tr><td><a href="vim.cluster.DasFailoverLevelAdvancedRuntimeInfo.html">ClusterDasFailoverLevelAdvancedRuntimeInfo</a></td>
+<td><a href="vim.cluster.DasFailoverLevelAdvancedRuntimeInfo.html#vmsRequiringMultipleSlots">vmsRequiringMultipleSlots</a></td></tr>
+<tr><td><a href="vim.cluster.FailoverLevelAdmissionControlPolicy.html">ClusterFailoverLevelAdmissionControlPolicy</a></td>
+<td><a href="vim.cluster.FailoverLevelAdmissionControlPolicy.html#slotPolicy">slotPolicy</a></td></tr>
+<tr><td><a href="vim.ComputeResource.ConfigInfo.html">ComputeResourceConfigInfo</a></td>
+<td><a href="vim.ComputeResource.ConfigInfo.html#defaultHardwareVersionKey">defaultHardwareVersionKey</a></td></tr>
+<tr><td><a href="vim.ComputeResource.ConfigSpec.html">ComputeResourceConfigSpec</a></td>
+<td><a href="vim.ComputeResource.ConfigSpec.html#defaultHardwareVersionKey">defaultHardwareVersionKey</a></td></tr>
+<tr><td rowspan="2"><a href="vim.DistributedVirtualSwitch.ConfigInfo.html">DVSConfigInfo</a></td>
+<td><a href="vim.DistributedVirtualSwitch.ConfigInfo.html#defaultProxySwitchMaxNumPorts">defaultProxySwitchMaxNumPorts</a></td></tr>
+<td><a href="vim.DistributedVirtualSwitch.ConfigInfo.html#healthCheckConfig">healthCheckConfig</a></td></tr>
+<tr><td><a href="vim.DistributedVirtualSwitch.ConfigSpec.html">DVSConfigSpec</a></td>
+<td><a href="vim.DistributedVirtualSwitch.ConfigSpec.html#defaultProxySwitchMaxNumPorts">defaultProxySwitchMaxNumPorts</a></td></tr>
+<tr><td rowspan="3"><a href="vim.DistributedVirtualSwitch.FeatureCapability.html">DVSFeatureCapability</a></td>
+<td><a href="vim.DistributedVirtualSwitch.FeatureCapability.html#backupRestoreCapability">backupRestoreCapability</a></td></tr>
+<td><a href="vim.DistributedVirtualSwitch.FeatureCapability.html#healthCheckCapability">healthCheckCapability</a></td></tr>
+<td><a href="vim.DistributedVirtualSwitch.FeatureCapability.html#rollbackCapability">rollbackCapability</a></td></tr>
+<tr><td><a href="vim.Datastore.Capability.html">DatastoreCapability</a></td>
+<td><a href="vim.Datastore.Capability.html#nativeSnapshotSupported">nativeSnapshotSupported</a></td></tr>
+<tr><td><a href="vim.dvs.DistributedVirtualPort.html">DistributedVirtualPort</a></td>
+<td><a href="vim.dvs.DistributedVirtualPort.html#hostLocalPort">hostLocalPort</a></td></tr>
+<tr><td><a href="vim.event.DvsPortBlockedEvent.html">DvsPortBlockedEvent</a></td>
+<td><a href="vim.event.DvsPortBlockedEvent.html#runtimeInfo">runtimeInfo</a></td></tr>
+<tr><td><a href="vim.event.DvsPortEnteredPassthruEvent.html">DvsPortEnteredPassthruEvent</a></td>
+<td><a href="vim.event.DvsPortEnteredPassthruEvent.html#runtimeInfo">runtimeInfo</a></td></tr>
+<tr><td><a href="vim.event.DvsPortExitedPassthruEvent.html">DvsPortExitedPassthruEvent</a></td>
+<td><a href="vim.event.DvsPortExitedPassthruEvent.html#runtimeInfo">runtimeInfo</a></td></tr>
+<tr><td><a href="vim.event.DvsPortLinkDownEvent.html">DvsPortLinkDownEvent</a></td>
+<td><a href="vim.event.DvsPortLinkDownEvent.html#runtimeInfo">runtimeInfo</a></td></tr>
+<tr><td><a href="vim.event.DvsPortLinkUpEvent.html">DvsPortLinkUpEvent</a></td>
+<td><a href="vim.event.DvsPortLinkUpEvent.html#runtimeInfo">runtimeInfo</a></td></tr>
+<tr><td><a href="vim.event.DvsPortUnblockedEvent.html">DvsPortUnblockedEvent</a></td>
+<td><a href="vim.event.DvsPortUnblockedEvent.html#runtimeInfo">runtimeInfo</a></td></tr>
+<tr><td rowspan="3"><a href="vim.EVCMode.html">EVCMode</a></td>
+<td><a href="vim.EVCMode.html#featureCapability">featureCapability</a></td></tr>
+<td><a href="vim.EVCMode.html#featureMask">featureMask</a></td></tr>
+<td><a href="vim.EVCMode.html#featureRequirement">featureRequirement</a></td></tr>
+<tr><td><a href="vim.ext.ManagedEntityInfo.html">ExtManagedEntityInfo</a></td>
+<td><a href="vim.ext.ManagedEntityInfo.html#iconUrl">iconUrl</a></td></tr>
+<tr><td><a href="vim.vm.GuestInfo.html">GuestInfo</a></td>
+<td><a href="vim.vm.GuestInfo.html#generationInfo">generationInfo</a></td></tr>
+<tr><td><a href="vim.vm.GuestOsDescriptor.html">GuestOsDescriptor</a></td>
+<td><a href="vim.vm.GuestOsDescriptor.html#recommended3D">recommended3D</a></td></tr>
+<tr><td rowspan="10"><a href="vim.host.Capability.html">HostCapability</a></td>
+<td><a href="vim.host.Capability.html#accel3dSupported">accel3dSupported</a></td></tr>
+<td><a href="vim.host.Capability.html#eightPlusHostVmfsSharedAccessSupported">eightPlusHostVmfsSharedAccessSupported</a></td></tr>
+<td><a href="vim.host.Capability.html#featureCapabilitiesSupported">featureCapabilitiesSupported</a></td></tr>
+<td><a href="vim.host.Capability.html#hbrNicSelectionSupported">hbrNicSelectionSupported</a></td></tr>
+<td><a href="vim.host.Capability.html#interVMCommunicationThroughVMCISupported">interVMCommunicationThroughVMCISupported</a></td></tr>
+<td><a href="vim.host.Capability.html#latencySensitivitySupported">latencySensitivitySupported</a></td></tr>
+<td><a href="vim.host.Capability.html#maxRegisteredVMs">maxRegisteredVMs</a></td></tr>
+<td><a href="vim.host.Capability.html#nestedHVSupported">nestedHVSupported</a></td></tr>
+<td><a href="vim.host.Capability.html#scheduledHardwareUpgradeSupported">scheduledHardwareUpgradeSupported</a></td></tr>
+<td><a href="vim.host.Capability.html#vPMCSupported">vPMCSupported</a></td></tr>
+<tr><td rowspan="3"><a href="vim.host.ConfigInfo.html">HostConfigInfo</a></td>
+<td><a href="vim.host.ConfigInfo.html#featureCapability">featureCapability</a></td></tr>
+<td><a href="vim.host.ConfigInfo.html#maskedFeatureCapability">maskedFeatureCapability</a></td></tr>
+<td><a href="vim.host.ConfigInfo.html#systemSwapConfiguration">systemSwapConfiguration</a></td></tr>
+<tr><td><a href="vim.host.InternetScsiHba.StaticTarget.html">HostInternetScsiHbaStaticTarget</a></td>
+<td><a href="vim.host.InternetScsiHba.StaticTarget.html#discoveryMethod">discoveryMethod</a></td></tr>
+<tr><td><a href="vim.host.MountInfo.html">HostMountInfo</a></td>
+<td><a href="vim.host.MountInfo.html#inaccessibleReason">inaccessibleReason</a></td></tr>
+<tr><td rowspan="4"><a href="vim.vApp.IpPool.html">IpPool</a></td>
+<td><a href="vim.vApp.IpPool.html#allocatedIpv4Addresses">allocatedIpv4Addresses</a></td></tr>
+<td><a href="vim.vApp.IpPool.html#allocatedIpv6Addresses">allocatedIpv6Addresses</a></td></tr>
+<td><a href="vim.vApp.IpPool.html#availableIpv4Addresses">availableIpv4Addresses</a></td></tr>
+<td><a href="vim.vApp.IpPool.html#availableIpv6Addresses">availableIpv6Addresses</a></td></tr>
+<tr><td><a href="vim.Network.Summary.html">NetworkSummary</a></td>
+<td><a href="vim.Network.Summary.html#ipPoolId">ipPoolId</a></td></tr>
+<tr><td><a href="vim.OvfManager.CreateDescriptorParams.html">OvfCreateDescriptorParams</a></td>
+<td><a href="vim.OvfManager.CreateDescriptorParams.html#exportOption">exportOption</a></td></tr>
+<tr><td><a href="vim.OvfManager.CommonParams.html">OvfManagerCommonParams</a></td>
+<td><a href="vim.OvfManager.CommonParams.html#importOption">importOption</a></td></tr>
+<tr><td rowspan="2"><a href="vim.profile.ProfileMetadata.html">ProfileMetadata</a></td>
+<td><a href="vim.profile.ProfileMetadata.html#profileCategory">profileCategory</a></td></tr>
+<td><a href="vim.profile.ProfileMetadata.html#profileComponent">profileComponent</a></td></tr>
+<tr><td><a href="vim.profile.ProfilePropertyPath.html">ProfilePropertyPath</a></td>
+<td><a href="vim.profile.ProfilePropertyPath.html#parameterId">parameterId</a></td></tr>
+<tr><td><a href="vim.ServiceInstanceContent.html">ServiceContent</a></td>
+<td><a href="vim.ServiceInstanceContent.html#serviceManager">serviceManager</a></td></tr>
+<tr><td rowspan="2"><a href="vim.SessionManager.GenericServiceTicket.html">SessionManagerGenericServiceTicket</a></td>
+<td><a href="vim.SessionManager.GenericServiceTicket.html#hostName">hostName</a></td></tr>
+<td><a href="vim.SessionManager.GenericServiceTicket.html#sslThumbprint">sslThumbprint</a></td></tr>
+<tr><td><a href="vim.profile.host.StaticRouteProfile.html">StaticRouteProfile</a></td>
+<td><a href="vim.profile.host.StaticRouteProfile.html#key">key</a></td></tr>
+<tr><td rowspan="2"><a href="vim.StorageResourceManager.IORMConfigSpec.html">StorageIORMConfigSpec</a></td>
+<td><a href="vim.StorageResourceManager.IORMConfigSpec.html#congestionThresholdMode">congestionThresholdMode</a></td></tr>
+<td><a href="vim.StorageResourceManager.IORMConfigSpec.html#percentOfPeakThroughput">percentOfPeakThroughput</a></td></tr>
+<tr><td rowspan="2"><a href="vim.StorageResourceManager.IORMConfigInfo.html">StorageIORMInfo</a></td>
+<td><a href="vim.StorageResourceManager.IORMConfigInfo.html#congestionThresholdMode">congestionThresholdMode</a></td></tr>
+<td><a href="vim.StorageResourceManager.IORMConfigInfo.html#percentOfPeakThroughput">percentOfPeakThroughput</a></td></tr>
+<tr><td rowspan="2"><a href="vim.storageDrs.StoragePlacementSpec.html">StoragePlacementSpec</a></td>
+<td><a href="vim.storageDrs.StoragePlacementSpec.html#disallowPrerequisiteMoves">disallowPrerequisiteMoves</a></td></tr>
+<td><a href="vim.storageDrs.StoragePlacementSpec.html#resourceLeaseDurationSec">resourceLeaseDurationSec</a></td></tr>
+<tr><td><a href="vim.event.UserLoginSessionEvent.html">UserLoginSessionEvent</a></td>
+<td><a href="vim.event.UserLoginSessionEvent.html#userAgent">userAgent</a></td></tr>
+<tr><td rowspan="5"><a href="vim.event.UserLogoutSessionEvent.html">UserLogoutSessionEvent</a></td>
+<td><a href="vim.event.UserLogoutSessionEvent.html#callCount">callCount</a></td></tr>
+<td><a href="vim.event.UserLogoutSessionEvent.html#ipAddress">ipAddress</a></td></tr>
+<td><a href="vim.event.UserLogoutSessionEvent.html#loginTime">loginTime</a></td></tr>
+<td><a href="vim.event.UserLogoutSessionEvent.html#sessionId">sessionId</a></td></tr>
+<td><a href="vim.event.UserLogoutSessionEvent.html#userAgent">userAgent</a></td></tr>
+<tr><td rowspan="3"><a href="vim.UserSession.html">UserSession</a></td>
+<td><a href="vim.UserSession.html#callCount">callCount</a></td></tr>
+<td><a href="vim.UserSession.html#ipAddress">ipAddress</a></td></tr>
+<td><a href="vim.UserSession.html#userAgent">userAgent</a></td></tr>
+<tr><td><a href="vim.vApp.PropertyInfo.html">VAppPropertyInfo</a></td>
+<td><a href="vim.vApp.PropertyInfo.html#typeReference">typeReference</a></td></tr>
+<tr><td rowspan="2"><a href="vim.dvs.VmwareDistributedVirtualSwitch.FeatureCapability.html">VMwareDVSFeatureCapability</a></td>
+<td><a href="vim.dvs.VmwareDistributedVirtualSwitch.FeatureCapability.html#lacpCapability">lacpCapability</a></td></tr>
+<td><a href="vim.dvs.VmwareDistributedVirtualSwitch.FeatureCapability.html#vspanCapability">vspanCapability</a></td></tr>
+<tr><td><a href="vim.dvs.VmwareDistributedVirtualSwitch.VmwarePortConfigPolicy.html">VMwareDVSPortSetting</a></td>
+<td><a href="vim.dvs.VmwareDistributedVirtualSwitch.VmwarePortConfigPolicy.html#lacpPolicy">lacpPolicy</a></td></tr>
+<tr><td rowspan="2"><a href="vim.dvs.VmwareDistributedVirtualSwitch.VspanPorts.html">VMwareVspanPort</a></td>
+<td><a href="vim.dvs.VmwareDistributedVirtualSwitch.VspanPorts.html#ipAddress">ipAddress</a></td></tr>
+<td><a href="vim.dvs.VmwareDistributedVirtualSwitch.VspanPorts.html#vlans">vlans</a></td></tr>
+<tr><td rowspan="2"><a href="vim.dvs.VmwareDistributedVirtualSwitch.VspanSession.html">VMwareVspanSession</a></td>
+<td><a href="vim.dvs.VmwareDistributedVirtualSwitch.VspanSession.html#samplingRate">samplingRate</a></td></tr>
+<td><a href="vim.dvs.VmwareDistributedVirtualSwitch.VspanSession.html#sessionType">sessionType</a></td></tr>
+<tr><td><a href="vim.vm.device.VirtualDevice.html">VirtualDevice</a></td>
+<td><a href="vim.vm.device.VirtualDevice.html#slotInfo">slotInfo</a></td></tr>
+<tr><td><a href="vim.vm.device.VirtualDeviceOption.html">VirtualDeviceOption</a></td>
+<td><a href="vim.vm.device.VirtualDeviceOption.html#busSlotOption">busSlotOption</a></td></tr>
+<tr><td><a href="vim.vm.device.VirtualDisk.FlatVer2BackingInfo.html">VirtualDiskFlatVer2BackingInfo</a></td>
+<td><a href="vim.vm.device.VirtualDisk.FlatVer2BackingInfo.html#deltaGrainSize">deltaGrainSize</a></td></tr>
+<tr><td><a href="vim.vm.device.VirtualDiskOption.FlatVer2BackingOption.html">VirtualDiskFlatVer2BackingOption</a></td>
+<td><a href="vim.vm.device.VirtualDiskOption.FlatVer2BackingOption.html#deltaDiskFormatsSupported">deltaDiskFormatsSupported</a></td></tr>
+<tr><td rowspan="5"><a href="vim.vm.Capability.html">VirtualMachineCapability</a></td>
+<td><a href="vim.vm.Capability.html#featureRequirementSupported">featureRequirementSupported</a></td></tr>
+<td><a href="vim.vm.Capability.html#nestedHVSupported">nestedHVSupported</a></td></tr>
+<td><a href="vim.vm.Capability.html#poweredOnMonitorTypeChangeSupported">poweredOnMonitorTypeChangeSupported</a></td></tr>
+<td><a href="vim.vm.Capability.html#seSparseDiskSupported">seSparseDiskSupported</a></td></tr>
+<td><a href="vim.vm.Capability.html#vPMCSupported">vPMCSupported</a></td></tr>
+<tr><td rowspan="4"><a href="vim.vm.ConfigInfo.html">VirtualMachineConfigInfo</a></td>
+<td><a href="vim.vm.ConfigInfo.html#latencySensitivity">latencySensitivity</a></td></tr>
+<td><a href="vim.vm.ConfigInfo.html#nestedHVEnabled">nestedHVEnabled</a></td></tr>
+<td><a href="vim.vm.ConfigInfo.html#scheduledHardwareUpgradeInfo">scheduledHardwareUpgradeInfo</a></td></tr>
+<td><a href="vim.vm.ConfigInfo.html#vPMCEnabled">vPMCEnabled</a></td></tr>
+<tr><td rowspan="2"><a href="vim.vm.ConfigOptionDescriptor.html">VirtualMachineConfigOptionDescriptor</a></td>
+<td><a href="vim.vm.ConfigOptionDescriptor.html#runSupported">runSupported</a></td></tr>
+<td><a href="vim.vm.ConfigOptionDescriptor.html#upgradeSupported">upgradeSupported</a></td></tr>
+<tr><td rowspan="4"><a href="vim.vm.ConfigSpec.html">VirtualMachineConfigSpec</a></td>
+<td><a href="vim.vm.ConfigSpec.html#latencySensitivity">latencySensitivity</a></td></tr>
+<td><a href="vim.vm.ConfigSpec.html#nestedHVEnabled">nestedHVEnabled</a></td></tr>
+<td><a href="vim.vm.ConfigSpec.html#scheduledHardwareUpgradeInfo">scheduledHardwareUpgradeInfo</a></td></tr>
+<td><a href="vim.vm.ConfigSpec.html#vPMCEnabled">vPMCEnabled</a></td></tr>
+<tr><td><a href="vim.vm.FileLayoutEx.FileInfo.html">VirtualMachineFileLayoutExFileInfo</a></td>
+<td><a href="vim.vm.FileLayoutEx.FileInfo.html#uniqueSize">uniqueSize</a></td></tr>
+<tr><td rowspan="4"><a href="vim.vm.RuntimeInfo.html">VirtualMachineRuntimeInfo</a></td>
+<td><a href="vim.vm.RuntimeInfo.html#featureMask">featureMask</a></td></tr>
+<td><a href="vim.vm.RuntimeInfo.html#featureRequirement">featureRequirement</a></td></tr>
+<td><a href="vim.vm.RuntimeInfo.html#offlineFeatureRequirement">offlineFeatureRequirement</a></td></tr>
+<td><a href="vim.vm.RuntimeInfo.html#onlineStandby">onlineStandby</a></td></tr>
+<tr><td><a href="vim.vm.device.VirtualVideoCard.html">VirtualMachineVideoCard</a></td>
+<td><a href="vim.vm.device.VirtualVideoCard.html#use3dRenderer">use3dRenderer</a></td></tr>
+<tr><td><a href="vim.vm.device.VirtualVideoCardOption.html">VirtualVideoCardOption</a></td>
+<td><a href="vim.vm.device.VirtualVideoCardOption.html#use3dRendererSupported">use3dRendererSupported</a></td></tr>
+<tr><td rowspan="2"><a href="vim.host.VmfsDatastoreInfo.html">VmfsDatastoreInfo</a></td>
+<td><a href="vim.host.VmfsDatastoreInfo.html#maxPhysicalRDMFileSize">maxPhysicalRDMFileSize</a></td></tr>
+<td><a href="vim.host.VmfsDatastoreInfo.html#maxVirtualRDMFileSize">maxVirtualRDMFileSize</a></td></tr>
+</table>
+<p>
+<script language="javascript" type="text/javascript">document.write(ID_Copyright);</script>
+<br><script language="javascript" type="text/javascript">document.write(ID_VersionInformation);</script>
+</p>
+</body>
+</html>

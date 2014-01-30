@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/tr/1999/REC-html401-19991224/loose.dtd">
+
+<html><head><title>VMware vSphere Web Services SDK .NET (DotNet) Samples Readme</title>
+<meta content="VMware, Inc. All rights reserved." name="copyright"></meta>
+<link rel="stylesheet" type="text/css" href="../../docresources/template.css">
+</link>
+<style type="text/css">
+
+
+h4 {
+	padding: 0;
+	font-size: 12px;
+	font-weight: bold;
+	border-top: 1px solid #dedede;
+	background-color:#E6EDF6;
+}
+
+div.underline_head {
+        text-decoration: underline;
+        margin-bottom: 15px;
+}
+
+.Parameter {
+	margin: 0 0 7px 0;
+	width: 100%;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.Code
+    {
+	font-size: 11px; font-family: 
+	"Courier New", Courier, monospace; 
+	}
+	
+.Console
+    {
+	font-size: 11px; font-family: 
+	"Courier New", Courier, monospace; 
+	color: #ffffff;
+	font-weight: bold;
+	background: #000000;
+	}
+
+.TableText {
+	FONT-SIZE: 11px;
+}
+
+.TableHead {
+	FONT-SIZE: 10px; font-weight: bold;
+}
+
+.BoldRedText {
+	FONT-WEIGHT: bold; COLOR: #CC0000; TEXT-DECORATION: none
+}
+.BoldBlue {
+	FONT-WEIGHT: bold; COLOR: #3366AA; TEXT-DECORATION: none
+}
+.Miniscule {font-size: 9px;
+           }
+
+.Nav {font-size: 11px; COLOR: #3366AA;
+           }
+.Large { font-size: 16px; FONT-WEIGHT: bold; }
+.Exp {
+	font-size:11px; text-transform: uppercase; FONT-WEIGHT: bold; COLOR: #3366AA;
+}
+.Caption {
+	font-size:11px; line-height:12px; text-transform: uppercase; FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: none
+}
+
+</style>
+</head>
+<body>
+		
+<table cellpadding="0" cellspacing="5" id="main-table">
+<tr><td id="main-body" align="left">
+<!-- ///*** start of content area ***/// -->
+
+<table width="100%" cellpadding="5">
+<tr>
+<td><h1>VMware vSphere Web Services SDK .NET (DotNet) Samples Readme</h1>
+<td align="right">
+<img src="../../docresources/vmware.gif" alt="VMware logo" width="187" height="72" border="0"></img>
+</td>
+</tr>
+</table>
+
+<p class="Nav">
+<img src="../../docresources/page.gif" alt="Back to the main Readme" width="13" height="16" border="0"></img> &nbsp;
+<a href="../../docs/SDK-README.html" title="Go back to the Web Services SDK Readme...">VMware vSphere Web Services SDK Readme</a>
+</p>
+
+<hr/>
+<table width="100%" cellpadding="0" cellspacing="0"><tr><td vAlign="top" width="40%">
+
+<p>This document includes these topics:</p>
+
+<ul>
+<li><a href="#requirements">Requirements</a></li>
+<li>Building the Samples
+<ul>
+<li><a href="#buildsamplesvisualstudio2005">Building the Samples Using Visual Studio 2005</a></li>
+<li><a href="#buildsamplesvc2005express">Building the Samples Using Visual C# 2005 Express</a></li>
+</ul>
+</li>
+<li><a href="#runsamples">Running the Samples</a></li>
+<li><a href="#samplesdesc">Samples Listing</a></li>
+</ul>
+
+</td><td vAlign="top" align="right">
+
+<!--caveat about state of document -->
+<table cellpadding="5" cellspacing="0" width="450" border="0">
+<tr><td colspan="2" align="left"><span class="Exp">Note:&nbsp;&nbsp;</span> Information in this document may not be current. For up-to-date information, check these VMware Web sites:</td></tr>
+<tr><td colspan="2" align="left"><table cellpadding="5" cellspacing="0" width="100%" border="1" class="light-blue-shade">
+<tr><td vAlign="top" colspan="2" align="left"></td></tr>
+<tr class="Caps"><td vAlign="top" width="45%" class="Caption" align="left">Beta or Pre-release Products</td>
+
+<td vAlign="top"><a href="http://communities.vmware.com/community/beta">VMware Beta Community</a></td></tr>
+
+<tr class="Caps"><td class="Caption">Released SDK Products</td><td vAlign="top"><a href="http://www.vmware.com/support/developer/vc-sdk/index.html">VMware vSphere Web Services SDK</a>
+</td></tr></table>
+</td></tr></table>
+<!--conclude caveat about state of links -->
+
+</td></tr>
+</table>
+
+<p>This document contains summary information only. See the Developer&#146;s Setup Guide (Chapter 3, &#147;Setting Up for Microsoft C# Development&#148;) for complete information.</p>
+
+
+<a name="requirements"></a>
+<h2><strong>Requirements</strong></h2>
+<p>
+Application development using the C# bindings to the vSphere API requires Microsoft Visual Studio 2005 or later, and
+Microsoft .NET 2.0 or later.
+</p>
+
+
+<a name="buildsamplesvisualstudio2005"></a>
+<h2><strong>Building the Samples</strong></h2>
+<p>You can build the C# (.NET) samples using Microsoft Visual C# 2005 Express or Microsoft Visual Studio 2005 or later.
+Visual Studio 2003 is neither recommended nor supported, due to a performance issue
+with .NET stubs.
+See <a href="http://kb.vmware.com/kb/87402">Knowledge Base article 87402</a> 
+(&#147;.NET Takes a Long Time to Instantiate the VimService Class&#148;) for a discussion of the issue.</p>
+<br /><br />
+
+<div class="underline_head">Building the Samples Using Visual Studio 2005 or later</div>
+
+<ul>
+<li><p>Build the .NET stubs using the information provided in the 
+Developer&#146;s Setup Guide (Chapter 3, &#147;Setting Up for Microsoft C# Development&#148;) to optimize startup performance.  See <a href="http://kb.vmware.com/kb/87402">Knowledge Base article 87402</a>
+ for a discussion of the performance issue and how Microsoft recommends users should optimize client stubs.</p>
+</li>
+<li><p>After the stubs have been generated, open the Solution file appropriate to the Visual Studio version
+installed, and build the Solution.</p>
+</li>
+</ul>
+
+<a name="buildsamplesvc2005express"></a>
+<div class="underline_head">Building the Samples Using Visual C# 2005 Express</div>
+<p>Select the default (Full) Microsoft Visual C# 2005 Express installation.</p>
+<p>If your Microsoft Visual C# 2005 Express installation has not been configured using default locations, you must:</p>
+
+<ul>
+<li><p>Create a VSINSTALLDIR environment variable (System environment variable);</p></li>
+<li><p>Set the VSINSTALLDIR environment variable to the locations of the Microsoft Visual Studio tools and .NET Framework 2.0.
+These components are in the <code>Common7</code> and </code>SDK</code> sub-directories of the Microsoft Visual C#
+2005 Express installation. By default, they are located in the following directories:
+<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>c:\Program Files\Microsoft Visual Studio 8\Common7</code>
+<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>c:\Program Files\Microsoft Visual Studio 8\SDK</code>
+<br /><br />
+Use quotation marks around directory names that have spaces in them. For example:
+<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#147;C:\apps\Microsoft Visual Studio 8&#148;</p></li>
+</ul>
+<p>If Visual C# Express is installed in the default location (&#147;c:\Program Files\Microsoft Visual Studio 8&#148;), you do not need to create or set the VSINSTALLDIR environment variable.
+</p>
+
+<ul>
+<li><p>Build the .NET stubs using the information provided in the 
+Developer&#146;s Setup Guide (Chapter 3, &#147;Setting Up for Microsoft C# Development&#148;) to optimize startup performance.  See <a href="http://kb.vmware.com/kb/87402">Knowledge Base article 87402</a>
+ for a discussion of the performance issue and how Microsoft recommends users should optimize client stubs.</p>
+</li>
+<li><p>After the stubs have been generated, open the Solution file appropriate to the Visual Studio Express version installed, and build the Solution.</p>
+</li>
+</ul>
+<p>See the Developer&#146;s Setup Guide (Chapter 3, &#147;Setting Up for Microsoft C# Development&#148;) for complete information.</p>
+
+
+<a name="runsamples"></a>
+<h2><strong>Running the Samples</strong>
+</h2>
+<p>The samples can be executed from within the <strong>\bin\debug</strong> directory of each project. You can also run the samples from within Visual Studio, at the .NET command prompt.</p>
+<p>To display help text for any application, simply run the application without any parameters. </p>
+
+<p><strong>To run any sample from within Visual Studio:</strong></p>
+<ol>
+<li>
+Set the Startup Project to any of the projects present in the solution. For example, right-mouse click on the Browser2005 Project and then select <strong>Set as Startup Project</strong> from the menu.</li>
+<li>Change the Project Properties to specify the command line arguments:
+
+<ul>
+<li>From the Project menu, select Properties to display the Property Pages dialog.</li>
+<li>In the <em>Project_Name</em> Property Pages dialog, select <strong>Configuration Properties&#151;Debugging</strong> in the left-hand pane.</li>
+<li>In the right-hand pane (under Start Options), select <strong>Command Line Arguments</strong>.</li>
+<li>Click <strong>OK</strong> or <strong>File > Save</strong> to save your changes.</li>
+</ul>
+</li>
+<li>Run the sample at the command prompt.</li>
+</ol>
+<p>See the Developer&#146;s Setup Guide (Chapter 3, &#147;Setting Up for Microsoft C# Development&#148;) for complete information.</p>
+
+<a name="samplesdesc"></a>
+<h2><strong>Some Sample Applications</strong></h2>
+
+
+<table width="100%"  border="1" cellpadding="10" cellspacing="0">
+
+
+<tr><td class="TableHead" vAlign="top">
+Sample</td><td class="TableHead">Description, command-line syntax, and example...</td></tr>
+
+<tr><td vAlign="top">
+<strong>Browser</strong></td><td vAlign="top">
+Gets contents of the Service starting at the root folder, and prints out listing. Optionally, obtain properties for a specific type, or by default, for ManagedEntity.</br></br>
+
+<p><strong>Command line syntax:</strong></br>
+<span class="Code">Browser &lt;webserviceurl&gt; &lt;username&gt; &lt;password&gt; [&lt;mo type&gt; &lt;property name&gt; ...]</span></p>
+
+<p><strong>Examples:</strong></br>
+<span class="Code">Browser http://my-server/sdk myuser mypaswd </br>
+Browser http://myserver/sdk myuser mypaswd VirtualMachine name</span></p>
+
+
+</td></tr>
+<tr class="light-blue-shade">
+
+      	<td vAlign="top">
+
+<strong>Connect</strong></td><td vAlign="top">Connects to service, logs into service, and logs out of service.</br></br>
+
+<p><strong>Command line syntax:</strong></br>
+<span class="Code">Connect &lt;webserviceurl&gt; &lt;username&gt; &lt;password&gt;</span></p>
+
+<p><strong>Example:</strong></br>
+<span class="Code">Connect http://my-server/sdk myuser mypaswd</span></p>
+
+</td></tr>
+<tr>
+      	<td vAlign="top">
+<strong>EventFormat</strong></td><td vAlign="top">
+<p>Retrieve and Format the latest event. Demonstrates Event formatting.</p>
+<p><strong>Command line syntax:</strong></br>
+<span class="Code">EventFormat &lt;webserviceurl&gt; &lt;username&gt; &lt;password&gt;</span></p>
+
+<p><strong>Example:</strong></br>
+<span class="Code">EventFormat http://my-server/sdk myuser mypaswd </span>
+</p>
+
+</td></tr>
+
+<tr class="light-blue-shade"><td vAlign="top">
+<strong>SimpleClient</strong></td><td vAlign="top">Code that demonstrates connecting to service, logging on to service, obtaining service content, and logging out from service.</br></br>
+
+<p><strong>Command line syntax:</strong></br>
+<span class="Code">SimpleClient &lt;webserviceurl&gt; &lt;username&gt; &lt;password&gt;</span></p>
+
+<p><strong>Example:</strong></br>
+<span class="Code">SimpleClient http://my-server/sdk myuser mypaswd</span></p>
+</td></tr>
+
+
+<tr>
+      	<td vAlign="top">
+<strong>VmPowerOps</strong></td><td vAlign="top">
+Retrieves a reference to a vm and invokes various power operations on it, as specified on the command line options.
+
+<p><strong>Command line syntax:</strong></br>
+<span class="Code">VmPowerOps &lt;webserviceurl&gt; &lt;username&gt; &lt;password&gt; &lt;anyvm|namedvm&gt; &lt;vmname&gt; &lt;on|off|suspend|reset&gt; &lt;normal|hard|softOrFail|softOrHard&gt; &lt;hostname&gt;</span></p>
+
+
+<p><strong>Example:</strong></br> 
+<span class="Code">VmPowerOps http://my-server/sdk myuser mypaswd myWin2k3_ProductionVM on normal myhost.mycompany.com</span></p>
+
+
+</td></tr>
+<tr class="light-blue-shade">
+      	<td vAlign="top">
+<strong>WatchVM</strong></td><td vAlign="top">
+<p>Monitors updates on a particular virtual machine using the PropertyCollector.
+</p>
+<p><strong>Command line syntax:</strong></br>
+<span class="Code">WatchVM &lt;webserviceurl&gt; &lt;username&gt; &lt;password&gt; &lt;inventory-path-to-vm&gt;</span></p>
+
+<p><strong>Example:</strong></br>
+<span class="Code">WatchVM http://my-server/sdk myuser mypaswd Datacenter1/vm/myvm</span></p>
+</td></tr></table>
+
+
+
+
+	 <a name="resources"></a><h2><strong>VMware Resources</strong></h2>
+
+	    <ul>
+		<li><a href="http://www.vmware.com/communities/content/developer/">Developer Center</a></li>
+          <li><a href="http://kb.vmware.com/">Knowledge Base</a></li>
+        <li><a href="http://www.vmware.com/communities/content/vmug/index.html">User Groups</a> </li>
+        <li><a href="http://communities.vmware.com">VMware Communities</a> </li>
+ 	    <li><a href="http://communities.vmware.com/community/developer/">VMware Developer Community</a></li>
+	 </ul>
+
+
+<hr />
+<table border="0" width="100%">
+<tr>
+<td>
+<p class="Miniscule">Copyright &copy; 2012 VMware, Inc.  All rights not expressly granted herein are reserved.</p>
+<td align="right">
+<p class="Miniscule">Last updated: 10Sep2012&nbsp;|&nbsp; VMware vSphere Web Services SDK</p>
+</td>
+</tr>
+</table>
+
+</td></tr></table>
+
+</body></html>

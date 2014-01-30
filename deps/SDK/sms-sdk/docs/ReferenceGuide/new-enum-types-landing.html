@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>VMware vSphere API Reference</title>
+<script language="JavaScript" src="./commonRes.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="doc-style.css"/>
+</head>
+<body>
+<h1>New and Changed Enumerated Type Elements in 5.1</h1>
+<p>
+ The following sections list the new enumerated type API elements:
+<ul>
+<li><a href="#newEnums">Enumerated Types</a></li>
+<li><a href="#newConstants">Enumerated Type Constants</a></li>
+</ul>
+<h2><a name="newEnums">New Enumerated Types</a></h2>
+<table border="1" cellpadding="5" cellspacing="0">
+<tr><th><strong>New Enumerated Types</strong></th></tr>
+<tr><td><a href="vim.DrsStatsManager.InjectorWorkload.CorrelationState.html">DrsInjectorWorkloadCorrelationState</a></td></tr>
+<tr><td><a href="vim.dvs.EntityBackup.ImportType.html">EntityImportType</a></td></tr>
+<tr><td><a href="vim.dvs.EntityBackup.EntityType.html">EntityType</a></td></tr>
+<tr><td><a href="vim.host.InternetScsiHba.StaticTarget.TargetDiscoveryMethod.html">HostInternetScsiHbaStaticTargetTargetDiscoveryMethod</a></td></tr>
+<tr><td><a href="vim.host.MountInfo.InaccessibleReason.html">HostMountInfoInaccessibleReason</a></td></tr>
+<tr><td><a href="vim.fault.InvalidDasConfigArgument.EntryForInvalidArgument.html">InvalidDasConfigArgumentEntryForInvalidArgument</a></td></tr>
+<tr><td><a href="vim.LatencySensitivity.SensitivityLevel.html">LatencySensitivitySensitivityLevel</a></td></tr>
+<tr><td><a href="vim.vm.ScheduledHardwareUpgradeInfo.HardwareUpgradePolicy.html">ScheduledHardwareUpgradeInfoHardwareUpgradePolicy</a></td></tr>
+<tr><td><a href="vim.vm.ScheduledHardwareUpgradeInfo.HardwareUpgradeStatus.html">ScheduledHardwareUpgradeInfoHardwareUpgradeStatus</a></td></tr>
+<tr><td><a href="vim.StorageResourceManager.CongestionThresholdMode.html">StorageIORMThresholdMode</a></td></tr>
+<tr><td><a href="vim.dvs.VmwareDistributedVirtualSwitch.TeamingMatchStatus.html">VMwareDVSTeamingMatchStatus</a></td></tr>
+<tr><td><a href="vim.dvs.VmwareDistributedVirtualSwitch.VspanSessionType.html">VMwareDVSVspanSessionType</a></td></tr>
+<tr><td><a href="vim.dvs.VmwareDistributedVirtualSwitch.UplinkLacpMode.html">VMwareUplinkLacpMode</a></td></tr>
+<tr><td><a href="vim.vm.device.VirtualVideoCard.Use3dRenderer.html">VirtualMachineVideoCardUse3dRenderer</a></td></tr>
+</table>
+<h2><a name="newConstants">New Enumerated Type Constants</a></h2>
+<table border="1" cellpadding="5" cellspacing="0">
+<tr><th><strong>Enumerated Type</strong></th>
+<th><strong>Enumerated Type Constant</strong></th></tr>
+<tr><td><a href="vim.fault.DasConfigFault.DasConfigFaultReason.html">DasConfigFaultDasConfigFaultReason</a></td>
+<td><a href="vim.fault.DasConfigFault.DasConfigFaultReason.html#NoDatastoresConfigured">NoDatastoresConfigured</a></td></tr>
+<tr><td rowspan="3"><a href="vim.vm.GuestOsDescriptor.SupportLevel.html">GuestOsDescriptorSupportLevel</a></td>
+<td><a href="vim.vm.GuestOsDescriptor.SupportLevel.html#deprecated">deprecated</a></td></tr>
+<td><a href="vim.vm.GuestOsDescriptor.SupportLevel.html#techPreview">techPreview</a></td></tr>
+<td><a href="vim.vm.GuestOsDescriptor.SupportLevel.html#unsupported">unsupported</a></td></tr>
+<tr><td><a href="vim.event.HostDisconnectedEvent.ReasonCode.html">HostDisconnectedEventReasonCode</a></td>
+<td><a href="vim.event.HostDisconnectedEvent.ReasonCode.html#vcVRAMCapacityExceeded">vcVRAMCapacityExceeded</a></td></tr>
+<tr><td><a href="vim.host.VirtualNicManager.NicType.html">HostVirtualNicManagerNicType</a></td>
+<td><a href="vim.host.VirtualNicManager.NicType.html#vSphereReplication">vSphereReplication</a></td></tr>
+<tr><td><a href="vim.OvfManager.CreateImportSpecParams.DiskProvisioningType.html">OvfCreateImportSpecParamsDiskProvisioningType</a></td>
+<td><a href="vim.OvfManager.CreateImportSpecParams.DiskProvisioningType.html#seSparse">seSparse</a></td></tr>
+<tr><td><a href="vim.host.ScsiLun.State.html">ScsiLunState</a></td>
+<td><a href="vim.host.ScsiLun.State.html#timeout">timeout</a></td></tr>
+<tr><td><a href="vim.vApp.IPAssignmentInfo.IpAllocationPolicy.html">VAppIPAssignmentInfoIpAllocationPolicy</a></td>
+<td><a href="vim.vApp.IPAssignmentInfo.IpAllocationPolicy.html#fixedAllocatedPolicy">fixedAllocatedPolicy</a></td></tr>
+<tr><td><a href="vim.vm.device.VirtualDisk.DeltaDiskFormat.html">VirtualDiskDeltaDiskFormat</a></td>
+<td><a href="vim.vm.device.VirtualDisk.DeltaDiskFormat.html#seSparseFormat">seSparseFormat</a></td></tr>
+<tr><td><a href="vim.VirtualDiskManager.VirtualDiskType.html">VirtualDiskType</a></td>
+<td><a href="vim.VirtualDiskManager.VirtualDiskType.html#seSparse">seSparse</a></td></tr>
+<tr><td><a href="vim.vm.DeviceRuntimeInfo.VirtualEthernetCardRuntimeState.VmDirectPathGen2InactiveReasonVm.html">VirtualMachineDeviceRuntimeInfoVirtualEthernetCardRuntimeStateVmDirectPathGen2InactiveReasonVm</a></td>
+<td><a href="vim.vm.DeviceRuntimeInfo.VirtualEthernetCardRuntimeState.VmDirectPathGen2InactiveReasonVm.html#vmNptVMCIActive">vmNptVMCIActive</a></td></tr>
+<tr><td><a href="vim.vm.FileLayoutEx.FileType.html">VirtualMachineFileLayoutExFileType</a></td>
+<td><a href="vim.vm.FileLayoutEx.FileType.html#namespaceData">namespaceData</a></td></tr>
+<tr><td rowspan="4"><a href="vim.vm.GuestOsDescriptor.GuestOsIdentifier.html">VirtualMachineGuestOsIdentifier</a></td>
+<td><a href="vim.vm.GuestOsDescriptor.GuestOsIdentifier.html#fedora64Guest">fedora64Guest</a></td></tr>
+<td><a href="vim.vm.GuestOsDescriptor.GuestOsIdentifier.html#fedoraGuest">fedoraGuest</a></td></tr>
+<td><a href="vim.vm.GuestOsDescriptor.GuestOsIdentifier.html#opensuse64Guest">opensuse64Guest</a></td></tr>
+<td><a href="vim.vm.GuestOsDescriptor.GuestOsIdentifier.html#opensuseGuest">opensuseGuest</a></td></tr>
+<tr><td><a href="vim.vm.RelocateSpec.DiskMoveOptions.html">VirtualMachineRelocateDiskMoveOptions</a></td>
+<td><a href="vim.vm.RelocateSpec.DiskMoveOptions.html#moveAllDiskBackingsAndConsolidate">moveAllDiskBackingsAndConsolidate</a></td></tr>
+<tr><td rowspan="2"><a href="vim.fault.VmFaultToleranceConfigIssue.ReasonForIssue.html">VmFaultToleranceConfigIssueReasonForIssue</a></td>
+<td><a href="vim.fault.VmFaultToleranceConfigIssue.ReasonForIssue.html#hasNestedHVConfiguration">hasNestedHVConfiguration</a></td></tr>
+<td><a href="vim.fault.VmFaultToleranceConfigIssue.ReasonForIssue.html#hasUnsupportedDisk">hasUnsupportedDisk</a></td></tr>
+</table>
+<p>
+<script language="javascript" type="text/javascript">document.write(ID_Copyright);</script>
+<br><script language="javascript" type="text/javascript">document.write(ID_VersionInformation);</script>
+</p>
+</body>
+</html>
