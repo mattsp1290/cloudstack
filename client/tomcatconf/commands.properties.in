@@ -705,3 +705,5 @@ importLdapUsers=3
 
 #### juniper-contrail commands
 createServiceInstance=1
+
+getHelloWorld=8
